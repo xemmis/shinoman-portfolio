@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru" data-type="place">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Зимние, летние и всесезонные. Подберите шины по размеру или модели автомобиля.">
+  <meta name="theme-color" content="#0f1720">
+  <meta name="page-type" content="place">
+  <meta name="site-kind" content="other">
+  <meta name="page-kind" content="place">
+  <meta property="og:title" content="Шины — Шиноман">
+  <meta property="og:description" content="Зимние, летние и всесезонные. Подберите шины по размеру или модели автомобиля.">
+  <meta property="og:type" content="website">
+  <title>Шины — Шиноман</title>
+  <link rel="icon" href="../../assets/shinoman-logo.png" type="image/png">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../catalog.css">
+  <script type="module" src="../catalog-page.mjs"></script>
+</head>
+<body class="shop" data-catalog="tires">
+  <a class="skip" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="wrap navigation">
+      <a class="brand" href="../../index.html" aria-label="Шиноман, главная"><img src="../../assets/shinoman-logo-dark.png" alt="Shinoman" width="640" height="239"></a>
+      <nav aria-label="Основная навигация"><a href="../shiny/" data-catalog-link aria-current="location">Шины и диски</a><a href="../../index.html#estimate">Цены</a><a href="../../index.html#visit">Как найти</a><a href="../../zapis-na-shinomontazh/">Запись</a><a href="../../index.html#case">О проекте</a></nav>
+      <span class="status-label">Портфолио · концепт</span>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="shop-hero" aria-labelledby="page-title">
+      <div class="wrap shop-hero-inner">
+        <div class="shop-hero-copy" data-enter>
+          <nav class="catalog-sections" aria-label="Разделы каталога"><a href="../shiny/" data-catalog-link aria-current="page">Шины</a> <a href="../diski/" data-catalog-link>Диски</a></nav>
+          <h1 id="page-title">Шины</h1>
+          <p>Зимние, летние и всесезонные. Подберите шины по размеру или модели автомобиля.</p>
+          <span class="shop-pickup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8 12 4l8 4v9l-8 4-8-4V8Zm0 0 8 4 8-4m-8 4v9M8 6l8 4"/></svg> Самовывоз · оплата при получении</span>
+        </div>
+        <img class="shop-hero-art" src="../images/catalog-wheel.svg" alt="" width="696" height="350" aria-hidden="true">
+      </div>
+    </section>
+
+    <div class="wrap shop-content">
+      <section class="fitment" aria-labelledby="fitment-title">
+        <div class="fitment-title">
+          <span class="fitment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 1.5-4.5A2 2 0 0 1 8.4 6h7.2a2 2 0 0 1 1.9 1.5L19 12m-14 0h14a2 2 0 0 1 2 2v3H3v-3a2 2 0 0 1 2-2Zm0 5v2m14-2v2M7 14.5h.1m9.9 0h.1"/></svg></span>
+          <div><h2 id="fitment-title">Подбор по автомобилю</h2><p>Выберите марку, модель и версию</p></div>
+        </div>
+        <div class="fitment-fields">
+          <label>Марка<select id="car-brand"><option value="">Выберите марку</option></select></label>
+          <label>Модель<select id="car-model" disabled><option value="">Выберите модель</option></select></label>
+          <label>Версия<select id="car-trim" disabled><option value="">Выберите версию</option></select></label>
+        </div>
+        <p class="fitment-result" id="fitment-result" role="status" hidden></p>
+      </section>
+
+      <section class="shop-catalog" aria-labelledby="results-title">
+        <details class="shop-filters" open>
+          <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/><path d="M8 4v4m8 2v4m-8 2v4" stroke-width="2.6"/></svg> Фильтры</summary>
+          <form id="filters">
+            <div id="filter-fields"></div>
+            <button type="reset" class="shop-reset">Сбросить параметры</button>
+          </form>
+        </details>
+        <div class="shop-results">
+          <div class="shop-results-head">
+            <div>
+              <h2 id="results-title">Каталог шин</h2>
+              <p id="results-count" role="status">Загружаем каталог…</p>
+            </div>
+            <label class="shop-sort"><span>Сортировка</span><select id="sort">
+              <option value="default">По умолчанию</option>
+              <option value="price-up">Сначала дешевле</option>
+              <option value="price-down">Сначала дороже</option>
+              <option value="name">По названию</option>
+            </select></label>
+          </div>
+          <p class="shop-demo" id="demo-note" hidden>Демо-каталог · цены, изображения и параметры автомобилей приведены для примера.</p>
+          <div class="shop-products" id="products"></div>
+          <div class="shop-empty" id="empty" hidden>
+            <h3>Ничего не найдено</h3>
+            <p>Измените параметры или выберите другой автомобиль.</p>
+            <button class="button primary" type="button" id="clear-all">Сбросить весь подбор</button>
+          </div>
+          <noscript><p>Включите JavaScript, чтобы посмотреть каталог и применить фильтры.</p></noscript>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="shop-footer">
+    <div class="wrap"><a href="../../index.html">Шиноман</a><a href="../../zapis-na-shinomontazh/">Записаться на шиномонтаж</a></div>
+  </footer>
+
+  <dialog class="shop-dialog" id="pickup-dialog" aria-labelledby="pickup-title">
+    <div class="shop-dialog-inner">
+      <form method="dialog" class="shop-dialog-close"><button type="submit" autofocus aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form>
+      <h2 id="pickup-title">Самовывоз</h2>
+      <p id="pickup-product"></p>
+      <label>Размер<select id="pickup-size"></select></label>
+      <label>Количество<select id="pickup-quantity">
+        <option value="1">1 шт.</option><option value="2">2 шт.</option><option value="3">3 шт.</option><option value="4" selected>4 шт.</option>
+      </select></label>
+      <p class="shop-dialog-total">Итого <strong id="pickup-total" aria-live="polite"></strong></p>
+      <p>Оплата при получении. В демо можно рассчитать сумму, заявки в магазин не отправляются.</p>
+      <a class="button primary" href="../../zapis-na-shinomontazh/">Записаться на шиномонтаж</a>
+    </div>
+  </dialog>
+</body>
+</html>

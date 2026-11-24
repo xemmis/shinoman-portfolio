@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 696 350" fill="none">
+<style>
+  .rotor { animation: turn 16s linear infinite; transform-origin: 0 0; }
+  @keyframes turn { to { transform: rotate(360deg); } }
+  @media(prefers-reduced-motion: reduce) { .rotor { animation: none; } }
+</style>
+<defs>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0v24" stroke="#8fa1b3" stroke-opacity=".12"/></pattern>
+  <linearGradient id="fade"><stop stop-color="#fff" stop-opacity="0"/><stop offset=".35" stop-color="#fff"/></linearGradient>
+  <mask id="ground"><path d="M0 0h696v350H0z" fill="url(#fade)"/></mask>
+  <linearGradient id="rubber" x1="0" y1="0" x2=".36" y2="1" gradientUnits="objectBoundingBox">
+    <stop stop-color="#657280"/><stop offset=".27" stop-color="#394653"/><stop offset=".76" stop-color="#25313c"/><stop offset="1" stop-color="#101820"/>
+  </linearGradient>
+  <linearGradient id="side" x1=".1" y1=".05" x2=".87" y2=".94" gradientUnits="objectBoundingBox">
+    <stop stop-color="#52616f"/><stop offset=".48" stop-color="#25313d"/><stop offset=".84" stop-color="#121c25"/><stop offset="1" stop-color="#425260"/>
+  </linearGradient>
+  <linearGradient id="steel" x1=".15" y1=".04" x2=".85" y2=".95" gradientUnits="objectBoundingBox">
+    <stop stop-color="#e2e9ee"/><stop offset=".26" stop-color="#93a6b7"/><stop offset=".49" stop-color="#405463"/><stop offset=".74" stop-color="#9faeb9"/><stop offset="1" stop-color="#d1dde3"/>
+  </linearGradient>
+  <linearGradient id="blade" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+    <stop stop-color="#becbd5"/><stop offset=".47" stop-color="#667987"/><stop offset=".55" stop-color="#324555"/><stop offset="1" stop-color="#788e9c"/>
+  </linearGradient>
+  <path id="carcass" d="M0-143H-60a143 143 0 0 0 0 286H0a143 143 0 0 0 0-286Z"/>
+  <clipPath id="visible-tread"><rect x="-145" y="-145" width="145" height="290"/></clipPath>
+  <g id="tread-slice" clip-path="url(#visible-tread)">
+    <g class="rotor">
+      <circle r="142" pathLength="360" stroke="#101922" stroke-width="2.6" stroke-dasharray="2 13"/>
+    </g>
+  </g>
+  <clipPath id="tire"><use href="#carcass"/></clipPath>
+  <path id="spoke" d="M-13-22Q-14-38-27-83L-25-95Q-6-99 17-97L23-87Q12-61 11-26Z" fill="url(#blade)" stroke="#93a6b5" stroke-width="1.4"/>
+  <circle id="bolt" cy="-23" r="3.4" fill="#0a131b" stroke="#a2b2bf" stroke-width="1.2"/>
+</defs>
+<g mask="url(#ground)">
+  <path d="M0 0h696v350H0z" fill="url(#grid)"/>
+  <path d="M123 350 557 0h138L264 350Z" fill="#9eaab6" fill-opacity=".06"/>
+  <path d="M123 350 557 0M148 350 582 0M595 350 696 270M103 305 484 0" stroke="#718396" stroke-opacity=".36"/>
+  <path d="M124 84h130l42-24h70m182 227h84l53-34m-108-157h119M355 314H225l-29-18H95" stroke="#7d91a5" stroke-opacity=".55" stroke-dasharray="2 5"/>
+</g>
+<g transform="translate(471 177) rotate(13) scale(.71 .91)">
+  <use href="#carcass" fill="url(#rubber)" stroke="#536371" stroke-width="1.5"/>
+  <g clip-path="url(#tire)">
+    <use href="#tread-slice" x="-60" stroke-dashoffset="0"/>
+    <use href="#tread-slice" x="-59" stroke-dashoffset="0.15"/>
+    <use href="#tread-slice" x="-58" stroke-dashoffset="0.3"/>
+    <use href="#tread-slice" x="-57" stroke-dashoffset="0.45"/>
+    <use href="#tread-slice" x="-56" stroke-dashoffset="0.6"/>
+    <use href="#tread-slice" x="-55" stroke-dashoffset="0.75"/>
+    <use href="#tread-slice" x="-54" stroke-dashoffset="0.9"/>
+    <use href="#tread-slice" x="-53" stroke-dashoffset="1.05"/>
+    <use href="#tread-slice" x="-52" stroke-dashoffset="1.2"/>
+    <use href="#tread-slice" x="-51" stroke-dashoffset="1.35"/>
+    <use href="#tread-slice" x="-50" stroke-dashoffset="1.5"/>
+    <use href="#tread-slice" x="-49" stroke-dashoffset="1.65"/>
+    <use href="#tread-slice" x="-48" stroke-dashoffset="1.8"/>
+    <use href="#tread-slice" x="-47" stroke-dashoffset="1.95"/>
+    <use href="#tread-slice" x="-46" stroke-dashoffset="2.1"/>
+    <use href="#tread-slice" x="-45" stroke-dashoffset="2.25"/>
+    <use href="#tread-slice" x="-44" stroke-dashoffset="2.4"/>
+    <use href="#tread-slice" x="-43" stroke-dashoffset="2.55"/>
+    <use href="#tread-slice" x="-42" stroke-dashoffset="2.7"/>
+    <use href="#tread-slice" x="-41" stroke-dashoffset="2.85"/>
+    <use href="#tread-slice" x="-40" stroke-dashoffset="3"/>
+    <use href="#tread-slice" x="-39" stroke-dashoffset="3.15"/>
+    <use href="#tread-slice" x="-38" stroke-dashoffset="3.3"/>
+    <use href="#tread-slice" x="-37" stroke-dashoffset="3.45"/>
+    <use href="#tread-slice" x="-36" stroke-dashoffset="3.6"/>
+    <use href="#tread-slice" x="-35" stroke-dashoffset="3.75"/>
+    <use href="#tread-slice" x="-34" stroke-dashoffset="3.9"/>
+    <use href="#tread-slice" x="-33" stroke-dashoffset="4.05"/>
+    <use href="#tread-slice" x="-32" stroke-dashoffset="4.2"/>
+    <use href="#tread-slice" x="-31" stroke-dashoffset="4.35"/>
+    <use href="#tread-slice" x="-30" stroke-dashoffset="4.5"/>
+    <use href="#tread-slice" x="-29" stroke-dashoffset="4.65"/>
+    <use href="#tread-slice" x="-28" stroke-dashoffset="4.8"/>
+    <use href="#tread-slice" x="-27" stroke-dashoffset="4.95"/>
+    <use href="#tread-slice" x="-26" stroke-dashoffset="5.2"/>
+    <use href="#tread-slice" x="-25" stroke-dashoffset="5"/>
+    <use href="#tread-slice" x="-24" stroke-dashoffset="4.8"/>
+    <use href="#tread-slice" x="-23" stroke-dashoffset="4.6"/>
+    <use href="#tread-slice" x="-22" stroke-dashoffset="4.4"/>
+    <use href="#tread-slice" x="-21" stroke-dashoffset="4.2"/>
+    <use href="#tread-slice" x="-20" stroke-dashoffset="4"/>
+    <use href="#tread-slice" x="-19" stroke-dashoffset="3.8"/>
+    <use href="#tread-slice" x="-18" stroke-dashoffset="3.6"/>
+    <use href="#tread-slice" x="-17" stroke-dashoffset="3.4"/>
+    <use href="#tread-slice" x="-16" stroke-dashoffset="3.2"/>
+    <use href="#tread-slice" x="-15" stroke-dashoffset="3"/>
+    <use href="#tread-slice" x="-14" stroke-dashoffset="2.8"/>
+    <use href="#tread-slice" x="-13" stroke-dashoffset="2.6"/>
+    <use href="#tread-slice" x="-12" stroke-dashoffset="2.4"/>
+    <use href="#tread-slice" x="-11" stroke-dashoffset="2.2"/>
+    <use href="#tread-slice" x="-10" stroke-dashoffset="2"/>
+    <use href="#tread-slice" x="-9" stroke-dashoffset="1.8"/>
+    <use href="#tread-slice" x="-8" stroke-dashoffset="1.6"/>
+    <use href="#tread-slice" x="-7" stroke-dashoffset="1.4"/>
+    <use href="#tread-slice" x="-6" stroke-dashoffset="1.2"/>
+    <use href="#tread-slice" x="-5" stroke-dashoffset="1"/>
+    <use href="#tread-slice" x="-4" stroke-dashoffset="0.8"/>
+    <use href="#tread-slice" x="-3" stroke-dashoffset="0.6"/>
+    <use href="#tread-slice" x="-2" stroke-dashoffset="0.4"/>
+    <use href="#tread-slice" x="-1" stroke-dashoffset="0.2"/>
+    <use href="#tread-slice" x="0" stroke-dashoffset="0"/>
+    <path d="M-48-143C-126-143-190-81-190 0s64 143 142 143M-23-143C-104-143-168-81-168 0s64 143 145 143M-7-143C-84-143-148-81-148 0s64 143 141 143" stroke="#111b23" stroke-width="4.8"/>
+    <path d="M-47-140C-123-140-186-77-186 0s63 137 139 140M-22-140C-99-140-164-77-164 0s65 137 142 140" stroke="#87939f" stroke-opacity=".38" stroke-width="1.1"/>
+  </g>
+  <circle r="142" fill="url(#side)" stroke="#778897" stroke-width="1.4"/>
+  <circle r="135" stroke="#131d26" stroke-width="3"/>
+  <circle r="130" stroke="#a0aeba" stroke-opacity=".42" stroke-width="1"/>
+  <circle r="119" stroke="#141e27" stroke-width="2"/>
+  <circle r="108" fill="#17232c" stroke="#101820" stroke-width="7"/>
+  <circle r="107" fill="url(#steel)" stroke="#435664" stroke-width="2"/>
+  <circle r="101" fill="#13202a" stroke="#becbd4" stroke-width="1.2"/>
+  <circle r="88" stroke="#4b5d6c" stroke-width="2"/>
+  <g class="rotor">
+    <circle r="126" stroke="#c6d2db" stroke-opacity=".55" stroke-width="2.2" stroke-dasharray="16 7 2 7 2 7 65 13 4 8 70 25 3 10 7 14 65 23"/>
+    <path d="M-64-104a122 122 0 0 1 49-17m65 232a122 122 0 0 1-44 11" stroke="#9baab6" stroke-opacity=".6" stroke-width="3" stroke-dasharray="3 3 1 2"/>
+    <use href="#spoke" transform="rotate(0)"/><use href="#bolt" transform="rotate(0)"/><use href="#spoke" transform="rotate(72)"/><use href="#bolt" transform="rotate(72)"/><use href="#spoke" transform="rotate(144)"/><use href="#bolt" transform="rotate(144)"/><use href="#spoke" transform="rotate(216)"/><use href="#bolt" transform="rotate(216)"/><use href="#spoke" transform="rotate(288)"/><use href="#bolt" transform="rotate(288)"/>
+    <circle r="16" fill="url(#steel)" stroke="#0e1921" stroke-width="1.4"/>
+    <circle r="11" fill="#293c4a" stroke="#b2c2ce" stroke-width="1.4"/>
+  </g>
+  <path d="M-75-77a107 107 0 0 1 93-28m54 185a107 107 0 0 1-88 25" stroke="#dee7ec" stroke-width="1.8" stroke-linecap="round"/>
+</g>
+</svg>

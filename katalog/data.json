@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "demo": true,
+  "items": [
+    {
+      "id": "northline-frost",
+      "type": "tires",
+      "brand": "Northline",
+      "name": "Frost X2",
+      "kind": "Зимние",
+      "image": "images/northline-frost.jpg",
+      "variants": [
+        { "sku": "northline-frost-1", "width": 195, "profile": 65, "diameter": 15, "load": 91, "speed": "T", "price": 21900 },
+        { "sku": "northline-frost-2", "width": 205, "profile": 55, "diameter": 16, "load": 91, "speed": "H", "price": 24800 },
+        { "sku": "northline-frost-3", "width": 225, "profile": 45, "diameter": 17, "load": 94, "speed": "V", "price": 31700 }
+      ]
+    },
+    {
+      "id": "roadmark-sprint",
+      "type": "tires",
+      "brand": "Roadmark",
+      "name": "Sprint S1",
+      "kind": "Летние",
+      "image": "images/roadmark-sprint.jpg",
+      "variants": [
+        { "sku": "roadmark-sprint-1", "width": 195, "profile": 65, "diameter": 15, "load": 91, "speed": "H", "price": 18800 },
+        { "sku": "roadmark-sprint-2", "width": 205, "profile": 55, "diameter": 16, "load": 91, "speed": "V", "price": 22600 },
+        { "sku": "roadmark-sprint-3", "width": 225, "profile": 45, "diameter": 17, "load": 94, "speed": "W", "price": 28700 }
+      ]
+    },
+    {
+      "id": "vectortrail-all",
+      "type": "tires",
+      "brand": "Vectortrail",
+      "name": "All Season 4",
+      "kind": "Всесезонные",
+      "image": "images/vectortrail-all.jpg",
+      "variants": [
+        { "sku": "vectortrail-all-1", "width": 185, "profile": 65, "diameter": 15, "load": 88, "speed": "H", "price": 19900 },
+        { "sku": "vectortrail-all-2", "width": 205, "profile": 55, "diameter": 16, "load": 94, "speed": "V", "price": 26900 },
+        { "sku": "vectortrail-all-3", "width": 215, "profile": 55, "diameter": 17, "load": 98, "speed": "V", "price": 32200 }
+      ]
+    },
+    {
+      "id": "northline-ice",
+      "type": "tires",
+      "brand": "Northline",
+      "name": "Ice Track",
+      "kind": "Зимние",
+      "image": "images/northline-ice.jpg",
+      "variants": [
+        { "sku": "northline-ice-1", "width": 185, "profile": 65, "diameter": 15, "load": 88, "speed": "T", "price": 20900 },
+        { "sku": "northline-ice-2", "width": 195, "profile": 65, "diameter": 15, "load": 95, "speed": "T", "price": 23500 },
+        { "sku": "northline-ice-3", "width": 215, "profile": 55, "diameter": 17, "load": 98, "speed": "H", "price": 32900 }
+      ]
+    },
+    {
+      "id": "roadmark-touring",
+      "type": "tires",
+      "brand": "Roadmark",
+      "name": "Touring T4",
+      "kind": "Летние",
+      "image": "images/roadmark-touring.jpg",
+      "variants": [
+        { "sku": "roadmark-touring-1", "width": 185, "profile": 65, "diameter": 15, "load": 88, "speed": "H", "price": 17500 },
+        { "sku": "roadmark-touring-2", "width": 205, "profile": 60, "diameter": 16, "load": 92, "speed": "V", "price": 25400 },
+        { "sku": "roadmark-touring-3", "width": 215, "profile": 55, "diameter": 17, "load": 94, "speed": "V", "price": 29200 }
+      ]
+    },
+    {
+      "id": "vectortrail-sport",
+      "type": "tires",
+      "brand": "Vectortrail",
+      "name": "Sport V7",
+      "kind": "Летние",
+      "image": "images/vectortrail-sport.jpg",
+      "variants": [
+        { "sku": "vectortrail-sport-1", "width": 225, "profile": 45, "diameter": 17, "load": 94, "speed": "W", "price": 31200 },
+        { "sku": "vectortrail-sport-2", "width": 225, "profile": 40, "diameter": 18, "load": 92, "speed": "Y", "price": 36900 },
+        { "sku": "vectortrail-sport-3", "width": 235, "profile": 45, "diameter": 18, "load": 98, "speed": "Y", "price": 41100 }
+      ]
+    },
+    {
+      "id": "forgeline-axis",
+      "type": "wheels",
+      "brand": "Forgeline Demo",
+      "name": "Axis 5",
+      "kind": "Литые",
+      "image": "images/forgeline-axis.jpg",
+      "variants": [
+        { "sku": "forgeline-axis-1", "diameter": 16, "width": 6.5, "pcd": "5x112", "bore": 57.1, "offset": 46, "price": 28900 },
+        { "sku": "forgeline-axis-2", "diameter": 17, "width": 7, "pcd": "5x112", "bore": 57.1, "offset": 49, "price": 33900 },
+        { "sku": "forgeline-axis-3", "diameter": 18, "width": 7.5, "pcd": "5x112", "bore": 57.1, "offset": 51, "price": 39800 }
+      ]
+    },
+    {
+      "id": "rimworks-arc",
+      "type": "wheels",
+      "brand": "Rimworks Demo",
+      "name": "Arc 10",
+      "kind": "Литые",
+      "image": "images/rimworks-arc.jpg",
+      "variants": [
+        { "sku": "rimworks-arc-1", "diameter": 15, "width": 6, "pcd": "5x100", "bore": 57.1, "offset": 38, "price": 24200 },
+        { "sku": "rimworks-arc-2", "diameter": 16, "width": 6.5, "pcd": "5x114.3", "bore": 67.1, "offset": 45, "price": 27800 },
+        { "sku": "rimworks-arc-3", "diameter": 17, "width": 7, "pcd": "5x114.3", "bore": 67.1, "offset": 48, "price": 31600 }
+      ]
+    },
+    {
+      "id": "rimworks-classic",
+      "type": "wheels",
+      "brand": "Rimworks Demo",
+      "name": "Classic S",
+      "kind": "Штампованные",
+      "image": "images/rimworks-classic.jpg",
+      "variants": [
+        { "sku": "rimworks-classic-1", "diameter": 15, "width": 6, "pcd": "5x112", "bore": 57.1, "offset": 43, "price": 11900 },
+        { "sku": "rimworks-classic-2", "diameter": 15, "width": 6, "pcd": "5x100", "bore": 57.1, "offset": 38, "price": 12500 },
+        { "sku": "rimworks-classic-3", "diameter": 16, "width": 6.5, "pcd": "5x112", "bore": 57.1, "offset": 46, "price": 14500 }
+      ]
+    },
+    {
+      "id": "forgeline-apex",
+      "type": "wheels",
+      "brand": "Forgeline Demo",
+      "name": "Apex 8",
+      "kind": "Литые",
+      "image": "images/forgeline-apex.jpg",
+      "variants": [
+        { "sku": "forgeline-apex-1", "diameter": 16, "width": 6.5, "pcd": "5x114.3", "bore": 67.1, "offset": 45, "price": 29700 },
+        { "sku": "forgeline-apex-2", "diameter": 17, "width": 7, "pcd": "5x114.3", "bore": 67.1, "offset": 48, "price": 35500 },
+        { "sku": "forgeline-apex-3", "diameter": 18, "width": 8, "pcd": "5x112", "bore": 66.6, "offset": 42, "price": 43300 }
+      ]
+    },
+    {
+      "id": "rimworks-vista",
+      "type": "wheels",
+      "brand": "Rimworks Demo",
+      "name": "Vista 6",
+      "kind": "Литые",
+      "image": "images/rimworks-vista.jpg",
+      "variants": [
+        { "sku": "rimworks-vista-1", "diameter": 16, "width": 6.5, "pcd": "5x100", "bore": 57.1, "offset": 40, "price": 24900 },
+        { "sku": "rimworks-vista-2", "diameter": 17, "width": 7, "pcd": "5x112", "bore": 57.1, "offset": 49, "price": 31900 },
+        { "sku": "rimworks-vista-3", "diameter": 18, "width": 7.5, "pcd": "5x112", "bore": 57.1, "offset": 51, "price": 38700 }
+      ]
+    },
+    {
+      "id": "forgeline-twin",
+      "type": "wheels",
+      "brand": "Forgeline Demo",
+      "name": "Twin 5",
+      "kind": "Литые",
+      "image": "images/forgeline-twin.jpg",
+      "variants": [
+        { "sku": "forgeline-twin-1", "diameter": 17, "width": 7, "pcd": "5x112", "bore": 57.1, "offset": 49, "price": 36500 },
+        { "sku": "forgeline-twin-2", "diameter": 18, "width": 7.5, "pcd": "5x112", "bore": 57.1, "offset": 51, "price": 42000 },
+        { "sku": "forgeline-twin-3", "diameter": 18, "width": 8, "pcd": "5x112", "bore": 66.6, "offset": 42, "price": 44900 }
+      ]
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "skoda-octavia-a7",
+      "brand": "Škoda",
+      "model": "Octavia",
+      "trim": "A7 · 2013–2020 · 1.4 TSI",
+      "tires": [
+        {
+          "width": 195,
+          "profile": 65,
+          "diameter": 15,
+          "load": 91
+        },
+        {
+          "width": 205,
+          "profile": 55,
+          "diameter": 16,
+          "load": 91
+        },
+        {
+          "width": 225,
+          "profile": 45,
+          "diameter": 17,
+          "load": 91
+        }
+      ],
+      "wheels": [
+        {
+          "diameter": 15,
+          "width": 6,
+          "pcd": "5x112",
+          "bore": 57.1,
+          "offset": 43
+        },
+        {
+          "diameter": 16,
+          "width": 6.5,
+          "pcd": "5x112",
+          "bore": 57.1,
+          "offset": 46
+        },
+        {
+          "diameter": 17,
+          "width": 7,
+          "pcd": "5x112",
+          "bore": 57.1,
+          "offset": 49
+        }
+      ]
+    },
+    {
+      "id": "skoda-octavia-a8",
+      "brand": "Škoda",
+      "model": "Octavia",
+      "trim": "A8 · 2020–2024 · 1.5 TSI",
+      "tires": [
+        {
+          "width": 205,
+          "profile": 55,
+          "diameter": 16,
+          "load": 91
+        },
+        {
+          "width": 225,
+          "profile": 45,
+          "diameter": 17,
+          "load": 91
+        }
+      ],
+      "wheels": [
+        {
+          "diameter": 16,
+          "width": 6.5,
+          "pcd": "5x112",
+          "bore": 57.1,
+          "offset": 46
+        },
+        {
+          "diameter": 17,
+          "width": 7,
+          "pcd": "5x112",
+          "bore": 57.1,
+          "offset": 49
+        }
+      ]
+    },
+    {
+      "id": "volkswagen-polo",
+      "brand": "Volkswagen",
+      "model": "Polo",
+      "trim": "V · 2015–2020 · 1.6 MPI",
+      "tires": [
+        {
+          "width": 185,
+          "profile": 65,
+          "diameter": 15,
+          "load": 88
+        }
+      ],
+      "wheels": [
+        {
+          "diameter": 15,
+          "width": 6,
+          "pcd": "5x100",
+          "bore": 57.1,
+          "offset": 38
+        },
+        {
+          "diameter": 16,
+          "width": 6.5,
+          "pcd": "5x100",
+          "bore": 57.1,
+          "offset": 40
+        }
+      ]
+    },
+    {
+      "id": "kia-ceed",
+      "brand": "Kia",
+      "model": "Ceed",
+      "trim": "III · 2018–2022 · 1.6 MPI",
+      "tires": [
+        {
+          "width": 205,
+          "profile": 55,
+          "diameter": 16,
+          "load": 91
+        },
+        {
+          "width": 225,
+          "profile": 45,
+          "diameter": 17,
+          "load": 91
+        }
+      ],
+      "wheels": [
+        {
+          "diameter": 16,
+          "width": 6.5,
+          "pcd": "5x114.3",
+          "bore": 67.1,
+          "offset": 45
+        },
+        {
+          "diameter": 17,
+          "width": 7,
+          "pcd": "5x114.3",
+          "bore": 67.1,
+          "offset": 48
+        }
+      ]
+    }
+  ]
+}

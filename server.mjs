@@ -1,8 +1,9 @@
 import { createServer } from 'node:http';
-import { mkdirSync, readFileSync } from 'node:fs';
+import { mkdirSync, readdirSync, readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { DatabaseSync } from 'node:sqlite';
+import { openCatalog } from './katalog/catalog-store.mjs';
 
 const root = fileURLToPath(new URL('.', import.meta.url));
 const locations = {
@@ -56,6 +57,10 @@ const save = db.prepare(`
 `);
 const findRequest = db.prepare('SELECT location, date, time, name, phone, car, plate FROM bookings WHERE request_id = ?');
 
+const catalog = openCatalog();
+const imageTypes = { svg: 'image/svg+xml', webp: 'image/webp', png: 'image/png', jpg: 'image/jpeg' };
+const catalogImages = readdirSync(resolve(root, 'katalog/images'))
+  .filter((file) => /^[a-z0-9-]+\.(svg|webp|png|jpg)$/.test(file));
 const staticFiles = new Map([
   ['/', ['index.html', 'text/html']],
   ['/index.html', ['index.html', 'text/html']],
@@ -67,6 +72,14 @@ const staticFiles = new Map([
   ['/zapis-na-shinomontazh/index.html', ['zapis-na-shinomontazh/index.html', 'text/html']],
   ['/zapis-na-shinomontazh/booking.js', ['zapis-na-shinomontazh/booking.js', 'text/javascript']],
   ['/zapis-na-shinomontazh/booking.css', ['zapis-na-shinomontazh/booking.css', 'text/css']],
+  ['/katalog/shiny/', ['katalog/shiny/index.html', 'text/html']],
+  ['/katalog/shiny/index.html', ['katalog/shiny/index.html', 'text/html']],
+  ['/katalog/diski/', ['katalog/diski/index.html', 'text/html']],
+  ['/katalog/diski/index.html', ['katalog/diski/index.html', 'text/html']],
+  ['/katalog/catalog.css', ['katalog/catalog.css', 'text/css']],
+  ['/katalog/catalog-model.mjs', ['katalog/catalog-model.mjs', 'text/javascript']],
+  ['/katalog/catalog-page.mjs', ['katalog/catalog-page.mjs', 'text/javascript']],
+  ...catalogImages.map((file) => [`/katalog/images/${file}`, [`katalog/images/${file}`, imageTypes[file.split('.').at(-1)]]]),
 ].map(([url, [path, type]]) => [url, { body: readFileSync(resolve(root, path)), type }]));
 
 function json(response, status, payload) {
@@ -183,9 +196,21 @@ const server = createServer({ requestTimeout: 15000 }, async (request, response)
       return json(response, 404, { error: 'Адрес API не найден.' });
     }
     if (request.method === 'GET' || request.method === 'HEAD') {
-      if (pathname === '/zapis-na-shinomontazh') {
-        response.writeHead(308, { Location: '/zapis-na-shinomontazh/' });
+      if (pathname === '/katalog' || pathname === '/katalog/') {
+        response.writeHead(308, { Location: `/katalog/shiny/${url.search}` });
         return response.end();
+      }
+      if (['/zapis-na-shinomontazh', '/katalog/shiny', '/katalog/diski'].includes(pathname)) {
+        response.writeHead(308, { Location: `${pathname}/${url.search}` });
+        return response.end();
+      }
+      if (pathname === '/katalog/data.json') {
+        const snapshot = catalog.read();
+        response.writeHead(200, {
+          'Content-Type': 'application/json; charset=utf-8',
+          'Cache-Control': 'no-store',
+        });
+        return response.end(snapshot);
       }
       const file = staticFiles.get(pathname);
       if (file) {
