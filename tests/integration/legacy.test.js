@@ -6,10 +6,10 @@ import { resolve } from 'node:path';
 import { test } from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
-import { filterCatalog, validateCatalog } from './catalog-model.mjs';
+import { filterCatalog, validateCatalog } from '../../katalog/catalog-model.mjs';
 
-const root = fileURLToPath(new URL('../', import.meta.url));
-const demo = validateCatalog(JSON.parse(readFileSync(new URL('./data.json', import.meta.url), 'utf8')));
+const root = fileURLToPath(new URL('../../', import.meta.url));
+const demo = validateCatalog(JSON.parse(readFileSync(new URL('../../katalog/data.json', import.meta.url), 'utf8')));
 
 test('combined tire filters and price sort use only matching variants', () => {
   const [vehicle] = demo.vehicles;
@@ -42,7 +42,7 @@ test('server reads the newest SQLite import and preserves the last valid snapsho
     CATALOG_DB_PATH: resolve(dir, 'catalog.sqlite'),
     BOOKING_DB_PATH: resolve(dir, 'booking.sqlite'),
   };
-  const server = spawn(process.execPath, ['server.mjs'], { cwd: root, env, stdio: ['ignore', 'pipe', 'inherit'] });
+  const server = spawn(process.execPath, ['src/server.js'], { cwd: root, env, stdio: ['ignore', 'pipe', 'inherit'] });
   context.after(async () => {
     if (server.exitCode === null) {
       const done = once(server, 'exit');
@@ -76,6 +76,11 @@ test('server reads the newest SQLite import and preserves the last valid snapsho
   });
   assert.equal(booked.status, 201);
   assert.deepEqual(await booked.json(), { saved: true });
+  const duplicate = await fetch(base + '/api/bookings', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...booking, requestId: 'b3f95f45-2f1d-4f1e-9b0e-0f6a6f6f6f6f' }),
+  });
+  assert.equal(duplicate.status, 409);
 
   const initial = await getCatalog();
   assert.equal(initial.items[0].variants[0].price, 21900);

@@ -1,0 +1,15 @@
+exclude:
+  - .data/
+  - .github/
+  - docs/
+  - graphify-out/
+  - migrations/
+  - node_modules/
+  - src/
+  - tests/
+  - AGENTS.md
+  - README.md
+  - package.json
+  - package-lock.json
+  - server.mjs
+  - katalog/catalog-store.mjs
